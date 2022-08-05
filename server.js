@@ -1,7 +1,7 @@
 require('dotenv').config()
 const express = require('express');
 const app = express();
-const port = 3005;
+const port = 3006;
 const path = require('path');
 const db = require("./DB_overview/dbmethod.js")
 
@@ -11,10 +11,9 @@ const cors = require('cors');
 app.use(cors());
 
 
-app.get('/loaderio-ccb0914874e2092f3c030579f99a2266.txt', async (req, res) => {
+app.get('http://localhost/loaderio-66f0b7e85f71337a8acb614334ac66cd.txt', async (req, res) => {
   try {
-    console.log("Send file", path.join(__dirname, 'loaderio-ccb0914874e2092f3c030579f99a2266.txt'))
-    res.status(200).sendFile(path.join(__dirname, 'loaderio-ccb0914874e2092f3c030579f99a2266.txt'))
+    res.status(200).sendFile(path.join(__dirname, 'loaderio-66f0b7e85f71337a8acb614334ac66cd.txt'))
   } catch (err) {
     console.log("Error getting styles:", err, style, req.params.product_id)
   }
